@@ -5,21 +5,21 @@
 class Tp < Formula
   desc "CLI for interacting with Targetprocess"
   homepage "https://github.com/lifedraft/targetprocess-cli"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.2.0/tp_darwin_amd64.tar.gz"
-      sha256 "e6423f851bb4b7e988b534c6d83ef9dd26df47b66d436836b4a8e14a5848b521"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_darwin_amd64.tar.gz"
+      sha256 "8ce2fb42db3ac86351c39dec30e45a4afa0b4304414d76107c7be3236150167b"
 
       def install
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.2.0/tp_darwin_arm64.tar.gz"
-      sha256 "935b124667485fd47332167449240c128799a16940ca365d0bc51507c2ca55d0"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_darwin_arm64.tar.gz"
+      sha256 "89c09b47348db9afcd669d7eb4a1b788fea509a2e2da392d8a5866447b1c9edd"
 
       def install
         bin.install "tp"
@@ -29,15 +29,15 @@ class Tp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.2.0/tp_linux_amd64.tar.gz"
-      sha256 "83bea5734fb921f6b768cdd8f1cf9f1d98d68a19cda94c224f41657cc817468a"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_linux_amd64.tar.gz"
+      sha256 "ec090dc18e7d9af3ef90589b04bc7c1871846e2f898aa7612342c2bc14945639"
       def install
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.2.0/tp_linux_arm64.tar.gz"
-      sha256 "e360fd4d5ec21a30daac20e29cde31afa806b2e33dc176d5eb6bbbf2d0e3f764"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_linux_arm64.tar.gz"
+      sha256 "9ebceeb68d1851228bf83c16febe72d7d96052b3888942a6d75e06e4f4f98002"
       def install
         bin.install "tp"
       end
