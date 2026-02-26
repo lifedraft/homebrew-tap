@@ -5,23 +5,23 @@
 class Tp < Formula
   desc "CLI for interacting with Targetprocess"
   homepage "https://github.com/lifedraft/targetprocess-cli"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_darwin_amd64.tar.gz"
-      sha256 "8ce2fb42db3ac86351c39dec30e45a4afa0b4304414d76107c7be3236150167b"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_darwin_amd64.tar.gz"
+      sha256 "683d9ea477b83d3b6ce5134836ccc8046b83669fa78042743288aae2538fefbb"
 
-      def install
+      define_method(:install) do
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_darwin_arm64.tar.gz"
-      sha256 "89c09b47348db9afcd669d7eb4a1b788fea509a2e2da392d8a5866447b1c9edd"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_darwin_arm64.tar.gz"
+      sha256 "04b2f342f8c34a4b245228678c3372d3d2482a4654cf39b65a14a1427c4424e4"
 
-      def install
+      define_method(:install) do
         bin.install "tp"
       end
     end
@@ -29,16 +29,16 @@ class Tp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_linux_amd64.tar.gz"
-      sha256 "ec090dc18e7d9af3ef90589b04bc7c1871846e2f898aa7612342c2bc14945639"
-      def install
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_linux_amd64.tar.gz"
+      sha256 "e3f7dffe26b95035018f32e764339a7d6e77b2c04a692e184ee90398ac51eb4f"
+      define_method(:install) do
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.3.0/tp_linux_arm64.tar.gz"
-      sha256 "9ebceeb68d1851228bf83c16febe72d7d96052b3888942a6d75e06e4f4f98002"
-      def install
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_linux_arm64.tar.gz"
+      sha256 "525ad44d02efc061cf0ebd48c93f9d710836bd77856e7dcff15e5e1823a84630"
+      define_method(:install) do
         bin.install "tp"
       end
     end
