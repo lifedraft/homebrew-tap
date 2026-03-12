@@ -5,21 +5,21 @@
 class Tp < Formula
   desc "CLI for interacting with Targetprocess"
   homepage "https://github.com/lifedraft/targetprocess-cli"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_darwin_amd64.tar.gz"
-      sha256 "683d9ea477b83d3b6ce5134836ccc8046b83669fa78042743288aae2538fefbb"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_darwin_amd64.tar.gz"
+      sha256 "4e1156e542b09a4967a0c34dcd9417ef25dbea3bcdb877a220f897563d382388"
 
       define_method(:install) do
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_darwin_arm64.tar.gz"
-      sha256 "04b2f342f8c34a4b245228678c3372d3d2482a4654cf39b65a14a1427c4424e4"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_darwin_arm64.tar.gz"
+      sha256 "a8dd53d4af2a593ea8578ffa14a24b057779783593f87aca7ac00f77f2cae663"
 
       define_method(:install) do
         bin.install "tp"
@@ -29,15 +29,15 @@ class Tp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_linux_amd64.tar.gz"
-      sha256 "e3f7dffe26b95035018f32e764339a7d6e77b2c04a692e184ee90398ac51eb4f"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_linux_amd64.tar.gz"
+      sha256 "5a04ae9d3f6c5ad9c69c262e3b4f8e0f40ca81b2359c7db10a5412add8572da7"
       define_method(:install) do
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.4.0/tp_linux_arm64.tar.gz"
-      sha256 "525ad44d02efc061cf0ebd48c93f9d710836bd77856e7dcff15e5e1823a84630"
+      url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_linux_arm64.tar.gz"
+      sha256 "f088f2f8921def384262f4564183b4ec537537de006d29d385521816cde34b36"
       define_method(:install) do
         bin.install "tp"
       end
