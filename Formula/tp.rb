@@ -11,7 +11,7 @@ class Tp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_darwin_amd64.tar.gz"
-      sha256 "4e1156e542b09a4967a0c34dcd9417ef25dbea3bcdb877a220f897563d382388"
+      sha256 "42c3943f653a224e1d5d14cf8b4de99f42fae463e8b03796a5867e6f6e75cecd"
 
       define_method(:install) do
         bin.install "tp"
@@ -19,7 +19,7 @@ class Tp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_darwin_arm64.tar.gz"
-      sha256 "a8dd53d4af2a593ea8578ffa14a24b057779783593f87aca7ac00f77f2cae663"
+      sha256 "6fb1cb53748b419fe68222dbece7f51ac5dce6a01b6c3040e2e21cfd899c60f9"
 
       define_method(:install) do
         bin.install "tp"
@@ -30,14 +30,14 @@ class Tp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_linux_amd64.tar.gz"
-      sha256 "5a04ae9d3f6c5ad9c69c262e3b4f8e0f40ca81b2359c7db10a5412add8572da7"
+      sha256 "a3dc9e52296e145d6ee96d79b3ef9ba0c7fe19d8a4b5e7a119977c6446aec065"
       define_method(:install) do
         bin.install "tp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lifedraft/targetprocess-cli/releases/download/v0.5.0/tp_linux_arm64.tar.gz"
-      sha256 "f088f2f8921def384262f4564183b4ec537537de006d29d385521816cde34b36"
+      sha256 "92228d07de86d3ee3fb451b8085033982ee893f34dd8055bf9756a9c7054258d"
       define_method(:install) do
         bin.install "tp"
       end
